@@ -6,9 +6,23 @@ import operator
 import openai
 import os
 from dotenv import load_dotenv
+from fastapi.middleware.cors import CORSMiddleware
+
+
+
 
 
 app = FastAPI(title="Postman")
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 load_dotenv()
 
