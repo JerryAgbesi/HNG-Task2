@@ -5,14 +5,11 @@ import requests
 import operator
 import openai
 import os
-from dotenv import load_dotenv
 
 
 app = FastAPI(title="Postman")
 
-load_dotenv()
-
-openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = "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"
 
 class Operation(Enum):
     
@@ -34,7 +31,7 @@ class postout(BaseModel):
 
 @app.post("/",response_model=postout)
 def home(payload:postin):
-    
+    print(type(payload.operation_type))
     if type(payload.operation_type) == Operation:
         if payload.operation_type.value.lower() == "addition":
             result = payload.x + payload.y 
