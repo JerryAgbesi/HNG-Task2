@@ -26,9 +26,9 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 
 class Operation(Enum):
     
-    addition = "addition"
-    subtraction = "subtraction"
-    multiplication = "multiplication"
+    addition = "addition"|"add"|"sum"
+    subtraction = "subtraction"|"difference"|"minus"
+    multiplication = "multiplication"|"product"|"multiply"
 
 class postin(BaseModel):
     operation_type: Operation|str
@@ -66,12 +66,8 @@ def home(payload:postin):
         
 
 
-    return {
-        "msg":{
-        postout(result=result,operation_type=payload.operation_type)
-        },
-        "status": True
-        }
+    return postout(result=result,operation_type=payload.operation_type)
+     
             
        
             

@@ -26,30 +26,6 @@ Using an API client(eg.Postman,Rapid API client) or the live docs at `https://po
 - RESPONSE:
 	```json
     {
-    "msg": {
-        "date_of_birth": "Tue, 12 Nov 1991 00:00:00 GMT",
-        "first_name": "Benedict",
-        "gender": null,
-        "hospital_code": "RMC04",
-        "hospital_name": "Ridge Medical Center",
-        "id_doctor": 32,
-        "id_message": null,
-        "last_name": "Cumberbatch",
-        "license_number": null,
-        "middle_name": null,
-        "person_image": "https://avatars.dicebear.com/api/bottts/$14.png",
-        "user_email": "sherlock@gmail.com"
-    },
-    "status": true
+    
    }
 	```   
-
-```json
-    {
-
-        "operation_type": "addition",
-        "x": 90,
-        "y": 12
-
-    }
-```
