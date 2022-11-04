@@ -26,9 +26,9 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 
 class Operation(Enum):
     
-    addition = "addition"|"add"|"sum"
-    subtraction = "subtraction"|"difference"|"minus"
-    multiplication = "multiplication"|"product"|"multiply"
+    addition = "addition"
+    subtraction = "subtraction"
+    multiplication = "multiplication"
 
 class postin(BaseModel):
     operation_type: Operation|str
