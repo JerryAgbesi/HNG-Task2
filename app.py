@@ -66,5 +66,13 @@ def home(payload:postin):
         
 
 
-    return postout(result=result,operation_type=payload.operation_type)
+    return {
+        "msg":{
+        postout(result=result,operation_type=payload.operation_type)
+        },
+        "status": True
+        }
+            
+       
+            
 
